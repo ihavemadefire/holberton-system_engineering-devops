@@ -1,2 +1,2 @@
 ##!/bin/bash
-chmod betty:holberton __hello -> hello
+chmod betty:holberton _hello -> hello
