@@ -1,2 +1,2 @@
-0	string	HOLBERTON	ls -la
---mime-type -type -m holberton.mgc *
+0	string	HOLBERTON	This is a holberton file
+!:mime	Holberton
