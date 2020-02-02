@@ -1,2 +1,2 @@
-#!/bin/bash
-tr -s [Ac][Ze]
+B#!/bin/bash
+tr "[Ac]" "[Ze]"
