@@ -1,2 +1,2 @@
 #!/bin/bash
-sed 's/C//;s/c//'
+sed -e 's/C//;s/c//'
