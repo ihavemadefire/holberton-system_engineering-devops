@@ -1,2 +1,2 @@
 #!/bin/bash
-find -name "*.gif" -type f -printf "%/n" |-f 1-d'.'
+find . "*.gif" | rev | cut -f1 -d '\' | rev | sort -k
