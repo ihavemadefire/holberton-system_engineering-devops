@@ -1,2 +1,2 @@
-#!/bin/bash
+.!/bin/bash
 find . "*.gif" | rev | cut -f1 -d '\' | rev | sort -k
