@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#demonstrate the while loop
+while [[ $I -lt 10 ]]; do
+	    echo "Holberton School"
+	    let I+=1
+done
