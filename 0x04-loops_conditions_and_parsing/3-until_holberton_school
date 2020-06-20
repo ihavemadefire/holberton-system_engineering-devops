@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Demonstrates the until loop
 COUNTER=0
 until [[  $COUNTER -gt 10 ]]; do
     echo Holberton School
