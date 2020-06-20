@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# nested loops
+I=0
+while [[ $I -lt 13 ]]; do
+        echo "Hour: $I"
+	J=1
+	while [[ $J -lt 60 ]]; do
+	    echo $J
+	    let J+=1
+	done
+	let I+=1
+done
