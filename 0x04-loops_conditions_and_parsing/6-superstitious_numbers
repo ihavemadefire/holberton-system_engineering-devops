@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#Superstitious numbers
+I=1
+while [[ $I -lt 21 ]]; do
+        echo $I
+	    let I+=1
+      case $I in
+	  5)
+	  echo "bad luck from China";;
+          10)
+          echo "bad luck from Japan";;
+	  18)
+          echo "bad luck from Italy";;
+	  *)
+      esac
+done
