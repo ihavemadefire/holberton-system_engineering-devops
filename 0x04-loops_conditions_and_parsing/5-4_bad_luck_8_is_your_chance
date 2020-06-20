@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#demonstrate the while loop with a conditional
+while [[ $I -lt 10 ]]; do
+    if [[ $I = 3 ]]; then
+	echo "bad luck"
+    elif [[ $I = 7 ]]; then
+	echo "good luck"
+    else
+        echo "Holberton School"
+    fi
+    let I+=1
+done
