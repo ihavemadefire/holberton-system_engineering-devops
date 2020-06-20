@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #demonstrate the while loop with a conditional
-while [[ $I -lt 10 ]]; do
-    if [[ $I = 8 ]]; then
+while [[ $I -lt 11 ]]; do
+    if [[ $I = 9 ]]; then
 	echo "Hi"
     else
         echo "Holberton School"
