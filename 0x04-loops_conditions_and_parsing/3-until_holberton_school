@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+COUNTER=9
+until [  $COUNTER -lt 0 ]; do
+    echo Holberton School
+    let COUNTER-=1
+done
