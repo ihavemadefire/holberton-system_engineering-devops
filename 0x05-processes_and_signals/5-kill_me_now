@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Kills current PID
-last = "$!"
+last="$!"
 kill $last
