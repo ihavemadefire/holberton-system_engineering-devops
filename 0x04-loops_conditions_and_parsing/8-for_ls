@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Ooop I forgot the comment
 for i in *; do
       echo "${i#*-}"
 done
