@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Shows attached addressed
+ifconfig | awk -F "[: ]+" '/inet addr:/ { print $4 }'
