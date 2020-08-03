@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This logs into a server with a key from file
 
-ssh -i ~/.ssh/holberton ubuntu@35.231.119.161
+ssh -i ~/.ssh/holberton ubuntu@35.237.36.104
