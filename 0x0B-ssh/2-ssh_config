@@ -1,0 +1,5 @@
+Host 35.237.36.104
+HostName  35.237.36.104
+User ubuntu
+IdentityFile ~/.ssh/holberton
+PasswordAuthentication no
