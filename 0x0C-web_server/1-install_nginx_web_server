@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# Downloads, configs and starts a server with a page that says Holberton School
+
+CON="server {\n
+    listen 80;
+    listen [::]:80;
+
+    server_name 35.237.36.104;
+
+    root /var/www/holberton;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+"
+
+sudo apt update
+sudo apt install nginx
+cd /var/www
+sudo mkdir holberton
+cd holberton
+sudo touch index.html
+echo 'Holberton School' >> index.html
+cd /etc/nginx/sites-enabled
+sudo touch tutorial
+echo "$CON" >> tutorial
+sudo service nginx restart
