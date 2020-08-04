@@ -1,5 +1,6 @@
 # Sets up config file
 
+include stdlib
 
 file_line { 'Turn off passwd auth':
   path   => '/etc/ssh/ssh_config',
