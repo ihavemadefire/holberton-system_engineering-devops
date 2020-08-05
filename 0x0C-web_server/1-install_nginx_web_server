@@ -16,8 +16,8 @@ CON="server {\n
 }
 "
 
-sudo apt update
-sudo apt install nginx
+sudo -y apt update
+sudo -y apt install nginx
 cd /var/www
 sudo mkdir holberton
 cd holberton
