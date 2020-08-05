@@ -10,4 +10,4 @@ if [  $# -le 3 ]
     exit 1
     fi
 
-scp -i '$4' -o StrictHostKeyChecking=no $1 $3@$2:~/
+scp -i '$4' -o StrictHostKeyChecking=no $1 $3@$2:/
