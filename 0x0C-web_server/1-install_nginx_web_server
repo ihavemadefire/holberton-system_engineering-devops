@@ -1,26 +1,9 @@
 #!/usr/bin/env bash
 # Downloads, configs and starts a server with a page that says Holberton School
 
-V="server {
-       listen 80;
-       listen [::]:80;
-
-       server_name 35.237.36.104;
-
-       root /var/www/tutorial;
-       index index.html;
-
-       location / {
-               try_files $uri $uri/ =404;
-       }
-}"
-
 sudo apt update
 sudo apt -y install nginx
-cd /var/www
-sudo mkdir tutorial
-cd tutorial
-echo "Holberton School" > index.html
-cd /etc/nginx/sites-enabled
-echo "$V" > tutorial
+cd /var/www/html/
+sudo chmod 777 index.nginx-debian.html
+sudo echo "Holberton School" > index.nginx-debian.html
 sudo service nginx restart
