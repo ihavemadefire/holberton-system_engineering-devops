@@ -22,5 +22,5 @@ sudo mkdir tutorial
 cd tutorial
 echo "Holberton School" > index.html
 cd /etc/nginx/sites-enabled
-echo"$V" > tutorial
+echo "$V" > tutorial
 sudo service nginx restart
