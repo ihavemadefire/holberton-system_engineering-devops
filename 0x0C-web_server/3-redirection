@@ -7,7 +7,7 @@ cd /var/www/html/
 sudo chmod 777 index.nginx-debian.html
 sudo echo "Holberton School" > index.nginx-debian.html
 LINK="https://www.youtube.com/watch?v=QH2-TGUlwu4"
-FILE="/etc/nginx/sites-available/"
+FILE="/etc/nginx/sites-available"
 sed -i "42a rewrite ^/redirect_me "$LINK" permanent" $FILE
 cd /etc/nginx/sites-available
 
