@@ -6,7 +6,7 @@ sudo apt -y install nginx
 cd /var/www/html/
 sudo chmod 777 index.nginx-debian.html
 sudo echo "Holberton School" > index.nginx-debian.html
+sed -i '42a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent 42' 
 cd /etc/nginx/sites-available
-N="server_name 35.237.36.104\n return 301 $scheme://newdomain.com$request_uri;"
-sudo sed -i "s/server_name _;/$N/" default
+
 sudo service nginx restart
