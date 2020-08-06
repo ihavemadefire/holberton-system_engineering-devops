@@ -6,7 +6,7 @@ sudo apt -y install nginx
 cd /var/www/html/
 sudo chmod 777 index.nginx-debian.html
 sudo echo "Holberton School" > index.nginx-debian.html
-cd /etc/nginx/sites-enabled
-new_string="35.237.36.104/redirect_me;\nreturn 301 google.com;\n"
-sudo sed -i "s/server_name _;/$new_string/" default
+cd /etc/nginx/sites-available
+N="server_name 35.237.36.104\n return 301 $scheme://newdomain.com$request_uri;"
+sudo sed -i "s/server_name _;/$N/" default
 sudo service nginx restart
