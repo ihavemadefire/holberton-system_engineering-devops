@@ -5,7 +5,7 @@ V="server {
        listen 80;
        listen [::]:80;
 
-       server_name example.ubuntu.com;
+       server_name 35.237.36.104;
 
        root /var/www/tutorial;
        index index.html;
