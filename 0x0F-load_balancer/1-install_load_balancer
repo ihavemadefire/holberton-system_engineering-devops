@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-apt-get install software-properties-common
+apt-get install -y software-properties-common
 add-apt-repository ppa:vbernat/haproxy-1.7
-apt-get update
-apt-get install haproxy=1.7.\*
+apt-get update -y
+apt-get install -y haproxy=1.7.\*
 
 
 TEXT="frontend http_front
@@ -16,3 +16,4 @@ backend web-backend
    server 1716-web-02 34.74.62.199:80 check"
 
 echo $TEXT >> /etc/haproxy/haproxy.cfg
+systemctl restart haproxy
