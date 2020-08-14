@@ -16,4 +16,6 @@ backend web-backend
    server 1716-web-02 34.74.62.199:80 check"
 
 echo $TEXT >> /etc/haproxy/haproxy.cfg
+chkconfig --add haproxy
+chkconfig haproxy on
 systemctl restart haproxy
