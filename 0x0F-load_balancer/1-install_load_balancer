@@ -7,7 +7,6 @@ apt-get install -y haproxy=1.7.\*
 
 
 TEXT="listen www
-   bind *:80
    balance roundrobin
    server 1716-web-01 35.237.36.104:80 check
    server 1716-web-02 34.74.62.199:80 check
