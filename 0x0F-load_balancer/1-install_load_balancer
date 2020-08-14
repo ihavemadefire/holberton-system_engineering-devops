@@ -5,17 +5,14 @@ apt-get update -y
 apt-get install -y haproxy=1.7.\*
 
 
-TEXT="frontend http_front
+TEXT="listen www
    bind *:80
-   stats uri /haproxy?stats
-   default_backend http_back
-
-backend web-backend
    balance roundrobin
    server 1716-web-01 35.237.36.104:80 check
-   server 1716-web-02 34.74.62.199:80 check"
+   server 1716-web-02 34.74.62.199:80 check
+
+"
 
 echo $TEXT >> /etc/haproxy/haproxy.cfg
-chkconfig --add haproxy
-chkconfig haproxy on
-systemctl restart haproxy
+echo "ENABLED=1" >> /etc/default/haproxy
+service restart haproxy
