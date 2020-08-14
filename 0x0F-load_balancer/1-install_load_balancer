@@ -16,4 +16,4 @@ TEXT="listen www
 
 echo $TEXT >> /etc/haproxy/haproxy.cfg
 echo "ENABLED=1" >> /etc/default/haproxy
-service restart haproxy
+service haproxy restart
