@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# This is a comment
 apt-get install -y software-properties-common
 add-apt-repository ppa:vbernat/haproxy-1.7
 apt-get update -y
