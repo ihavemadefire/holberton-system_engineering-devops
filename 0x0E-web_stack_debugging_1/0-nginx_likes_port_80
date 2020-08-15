@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
-sudo apt update
+# Restarts a server to display the default
+
+sudo apt -y update
 sudo apt -y install nginx
 sudo service nginx restart
