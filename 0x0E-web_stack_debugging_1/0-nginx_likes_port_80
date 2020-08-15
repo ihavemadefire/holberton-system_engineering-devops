@@ -3,4 +3,8 @@
 
 sudo apt -y update
 sudo apt -y install nginx
+# remove default file link
+rm /etc/nginx/sites-enabled/default
+# rebuild link to default
+ln -s /etc/nginx/sites-available/default rm /etc/nginx/sites-enabled/default
 sudo service nginx restart
