@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Restarts a server to display the default site
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx start
-pkill nginx
+service nginx restart
+mv /var/run/nginx.pid /var/run/not running.pid
