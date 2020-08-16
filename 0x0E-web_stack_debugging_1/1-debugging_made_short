@@ -2,4 +2,4 @@
 # Restarts a server to display the default site
 rm /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-sudo service nginx restart
+sudo service nginx reload
