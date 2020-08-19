@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Parses and digs passed args
+
+function dig_dug () {
+    echo "$1"
+    echo "$2"
+    text=$(dig $2.$1 | grep -A1 'ANSWER SECTION:' | awk '{printf $5}')
+    echo "The subdomain $2 is a A record and points to $text"
+}
+if [[ $# = 1 ]]; then
+    dig_dug "$1" "www"
+    dig_dug "$1" "lb-01"
+    dig_dug "$1" "web-01"
+    dig_dug "$1" "web-02"
+elif [[ $# = 2 ]]; then
+    dig_dug "$1" "$2"
+fi
