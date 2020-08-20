@@ -36,19 +36,19 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend http
+frontend localnodes-http
         bind *:80
         reqadd X-Forwarded-Proto:\ http
-        default_backend web_servers
+        default_backend nodes
 
-frontend https
+frontend localnodes-https
         bind *:443 ssl crt /etc/haproxy/certs/all.pem
         reqadd X-Forwarded-Proto:\ https
         http-request set-header X-SSL %[ssl_fc]
-	default_backend web_servers
+	default_backend nodes
 
-backend web_servers
+backend nodes
         mode http
         balance roundrobin
-        server 1716-web-01 35.237.36.104:80 check
-        server 1716-web-02 34.74.62.199:80 check
+        server 1716-web-01 35.237.36.104
+        server 1716-web-02 34.74.62.199
