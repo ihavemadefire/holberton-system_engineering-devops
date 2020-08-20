@@ -35,10 +35,12 @@ defaults
         errorfile 502 /etc/haproxy/errors/502.http
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
-listen www
+listen www.jacobmeide.tech
         bind :80
-        bind :443 ssl crt /etc/haproxy/certs/
-        http-request redirect scheme https unless { ssl_fc }
+        bind :443 ssl crt /etc/haproxy/certs/all.pem
+        default_backend web_servers
+
+backend web_servers
         balance roundrobin
         server 1716-web-01 35.237.36.104:80 check
-        server 1716-web-02 34.74.62.199:80 check#!/usr/bin/env bash
+        server 1716-web-02 34.74.62.199:80 check
