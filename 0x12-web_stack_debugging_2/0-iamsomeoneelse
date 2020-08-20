@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # creates a new user prints their name
 sudo useradd "$1"
-sudo -u user "$1" whoami
+sudo -u "$1" whoami
 sudo userdel "$1"
