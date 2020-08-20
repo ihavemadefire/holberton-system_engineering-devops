@@ -2,5 +2,5 @@
 # creates a new user prints their name
 
 sudo useradd "$1"
-sudo runuser -l  "$1" -c 'whoami'
+sudo user "$1" whoami
 sudo userdel "$1"
