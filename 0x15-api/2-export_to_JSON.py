@@ -15,7 +15,7 @@ if __name__ == "__main__":
     info = [{"task": i.get("title"),
              "completed": i.get("completed"),
              "username": name.get("username")}
-             for i in todos]
+            for i in todos]
     json_dict = {}
     json_dict[u] = info
     file_name = '{}.json'.format(u)
