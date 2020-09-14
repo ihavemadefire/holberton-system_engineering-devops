@@ -13,8 +13,8 @@ if __name__ == "__main__":
     todos = requests.get(
         "https://jsonplaceholder.typicode.com/todos/?userId=" + u).json()
     info = [{"task": i.get("title"),
-              "completed": i.get("completed"),
-              "username": name.get("username")}
+             "completed": i.get("completed"),
+             "username": name.get("username")}
              for i in todos]
     json_dict = {}
     json_dict[u] = info
