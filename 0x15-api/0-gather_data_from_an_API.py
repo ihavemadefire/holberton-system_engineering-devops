@@ -6,8 +6,10 @@ import sys
 
 if __name__ == "__main__":
     u = sys.argv[1]
-    names = requests.get("https://jsonplaceholder.typicode.com/users/" + u).json()
-    todos = requests.get("https://jsonplaceholder.typicode.com/todos/?userId=" + u).json()
+    names = requests.get(
+        "https://jsonplaceholder.typicode.com/users/" + u).json()
+    todos = requests.get(
+        "https://jsonplaceholder.typicode.com/todos/?userId=" + u).json()
     total = len(todos)
     completed = [i for i in todos if i.get("completed") is True]
     print("Employee {} is done with tasks({}/{}):".format(names.get("name"),
